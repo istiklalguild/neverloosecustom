@@ -4870,7 +4870,7 @@ local Library do
                 local IndicatorStroke = Instances:Create("UIStroke", {
                     Parent = Items["Indicator"].Instance,
                     Name = "\0",
-                    Color = FromRGB(255, 75, 75),
+                    Color = FromRGB(80, 160, 255),
                     Thickness = 1.5,
                     ApplyStrokeMode = Enum.ApplyStrokeMode.Border
                 })
@@ -5369,7 +5369,7 @@ local Library do
                 local ButtonStroke = Instances:Create("UIStroke", {
                     Parent = Items["Button"].Instance,
                     Name = "\0",
-                    Color = FromRGB(255, 75, 75),
+                    Color = FromRGB(255, 255, 255),
                     Thickness = 1.5,
                     ApplyStrokeMode = Enum.ApplyStrokeMode.Border
                 })
@@ -5562,7 +5562,7 @@ local Library do
                 local SliderStroke = Instances:Create("UIStroke", {
                     Parent = Items["RealSlider"].Instance,
                     Name = "\0",
-                    Color = FromRGB(255, 75, 75),
+                    Color = FromRGB(255, 255, 255),
                     Thickness = 1.5,
                     ApplyStrokeMode = Enum.ApplyStrokeMode.Border
                 })
@@ -5854,7 +5854,7 @@ local Library do
                 local DropdownStroke = Instances:Create("UIStroke", {
                     Parent = Items["RealDropdown"].Instance,
                     Name = "\0",
-                    Color = FromRGB(255, 75, 75),
+                    Color = FromRGB(255, 255, 255),
                     Thickness = 1.5,
                     ApplyStrokeMode = Enum.ApplyStrokeMode.Border
                 })
@@ -7128,7 +7128,7 @@ local Library do
                 local TextboxStroke = Instances:Create("UIStroke", {
                     Parent = Items["Background"].Instance,
                     Name = "\0",
-                    Color = FromRGB(255, 75, 75),
+                    Color = FromRGB(255, 255, 255),
                     Thickness = 1.5,
                     ApplyStrokeMode = Enum.ApplyStrokeMode.Border
                 })
@@ -7272,7 +7272,7 @@ local Library do
                 local SearchStroke = Instances:Create("UIStroke", {
                     Parent = Items["Search"].Instance,
                     Name = "\0",
-                    Color = FromRGB(255, 75, 75),
+                    Color = FromRGB(255, 255, 255),
                     Thickness = 1.5,
                     ApplyStrokeMode = Enum.ApplyStrokeMode.Border
                 })
@@ -7305,7 +7305,7 @@ local Library do
                 local ListboxStroke = Instances:Create("UIStroke", {
                     Parent = Items["Background"].Instance,
                     Name = "\0",
-                    Color = FromRGB(255, 75, 75),
+                    Color = FromRGB(255, 255, 255),
                     Thickness = 1.5,
                     ApplyStrokeMode = Enum.ApplyStrokeMode.Border
                 })
