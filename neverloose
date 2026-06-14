@@ -185,7 +185,7 @@ local Library do
             ["Background 2"] = FromRGB(22, 22, 28),     
             ["Background"] = FromRGB(18, 18, 24),       
             ["Text"] = FromRGB(255, 255, 255),         
-            ["Outline"] = FromRGB(100, 100, 115),           
+            ["Outline"] = FromRGB(255, 50, 50),           
             ["Section Top"] = FromRGB(32, 32, 42),      
             ["Section Background"] = FromRGB(22, 22, 30),
             ["Section Background 2"] = FromRGB(26, 26, 34),
