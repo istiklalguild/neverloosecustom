@@ -185,7 +185,7 @@ local Library do
             ["Background 2"] = FromRGB(22, 22, 28),     
             ["Background"] = FromRGB(18, 18, 24),       
             ["Text"] = FromRGB(255, 255, 255),         
-            ["Outline"] = FromRGB(245, 50, 50),           
+            ["Outline"] = FromRGB(231, 50, 50),           
             ["Section Top"] = FromRGB(32, 32, 42),      
             ["Section Background"] = FromRGB(22, 22, 30),
             ["Section Background 2"] = FromRGB(26, 26, 34),
@@ -5332,6 +5332,8 @@ local Library do
 
             Toggle.Section.Elements[#Toggle.Section.Elements+1] = Toggle
 
+            Toggle:RefreshPosition(Toggle.Section.Page.Active)
+
             return Toggle 
         end
 
@@ -5772,6 +5774,9 @@ local Library do
             end
 
             Slider.Section.Elements[#Slider.Section.Elements+1] = Slider
+
+            Slider:RefreshPosition(Slider.Section.Page.Active)
+
             return Slider 
         end
 
@@ -6396,6 +6401,9 @@ local Library do
             end
 
             Dropdown.Section.Elements[#Dropdown.Section.Elements+1] = Dropdown
+
+            Dropdown:RefreshPosition(Dropdown.Section.Page.Active)
+
             return Dropdown
         end
 
@@ -6533,6 +6541,9 @@ local Library do
             end
 
             Label.Section.Elements[#Label.Section.Elements+1] = Label
+
+            Label:RefreshPosition(Label.Section.Page.Active)
+
             return Label
         end
 
@@ -7057,6 +7068,9 @@ local Library do
             end
 
             Keybind.Section.Elements[#Keybind.Section.Elements+1] = Keybind
+
+            Keybind:RefreshPosition(Keybind.Section.Page.Active)
+
             return Keybind 
         end
 
@@ -7198,6 +7212,9 @@ local Library do
             end
 
             Textbox.Section.Elements[#Textbox.Section.Elements+1] = Textbox
+
+            Textbox:RefreshPosition(Textbox.Section.Page.Active)
+
             return Textbox
         end
 
@@ -7630,6 +7647,9 @@ local Library do
             end
 
             Dropdown.Section.Elements[#Dropdown.Section.Elements+1] = Dropdown
+
+            Dropdown:RefreshPosition(Dropdown.Section.Page.Active)
+
             return Dropdown
         end
     end
