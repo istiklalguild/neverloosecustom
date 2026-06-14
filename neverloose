@@ -5332,7 +5332,7 @@ local Library do
 
             Toggle.Section.Elements[#Toggle.Section.Elements+1] = Toggle
 
-            Toggle:RefreshPosition(Toggle.Section.Page.Active)
+            Toggle:RefreshPosition(Toggle.Section.Page and Toggle.Section.Page.Active or false)
 
             return Toggle 
         end
@@ -5775,7 +5775,7 @@ local Library do
 
             Slider.Section.Elements[#Slider.Section.Elements+1] = Slider
 
-            Slider:RefreshPosition(Slider.Section.Page.Active)
+            Slider:RefreshPosition(Slider.Section.Page and Slider.Section.Page.Active or false)
 
             return Slider 
         end
@@ -6402,7 +6402,7 @@ local Library do
 
             Dropdown.Section.Elements[#Dropdown.Section.Elements+1] = Dropdown
 
-            Dropdown:RefreshPosition(Dropdown.Section.Page.Active)
+            Dropdown:RefreshPosition(Dropdown.Section.Page and Dropdown.Section.Page.Active or false)
 
             return Dropdown
         end
@@ -6542,7 +6542,7 @@ local Library do
 
             Label.Section.Elements[#Label.Section.Elements+1] = Label
 
-            Label:RefreshPosition(Label.Section.Page.Active)
+            Label:RefreshPosition(Label.Section.Page and Label.Section.Page.Active or false)
 
             return Label
         end
@@ -7069,7 +7069,7 @@ local Library do
 
             Keybind.Section.Elements[#Keybind.Section.Elements+1] = Keybind
 
-            Keybind:RefreshPosition(Keybind.Section.Page.Active)
+            Keybind:RefreshPosition(Keybind.Section.Page and Keybind.Section.Page.Active or false)
 
             return Keybind 
         end
@@ -7213,7 +7213,7 @@ local Library do
 
             Textbox.Section.Elements[#Textbox.Section.Elements+1] = Textbox
 
-            Textbox:RefreshPosition(Textbox.Section.Page.Active)
+            Textbox:RefreshPosition(Textbox.Section.Page and Textbox.Section.Page.Active or false)
 
             return Textbox
         end
@@ -7648,7 +7648,7 @@ local Library do
 
             Dropdown.Section.Elements[#Dropdown.Section.Elements+1] = Dropdown
 
-            Dropdown:RefreshPosition(Dropdown.Section.Page.Active)
+            Dropdown:RefreshPosition(Dropdown.Section.Page and Dropdown.Section.Page.Active or false)
 
             return Dropdown
         end
