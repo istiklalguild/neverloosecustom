@@ -181,16 +181,16 @@ local Library do
 
     local Themes = {
         ["Preset"] = {
-            ["AccentGradient"] = FromRGB(0, 220, 255),   -- Bright cyan accent gradient
-            ["Background 2"] = FromRGB(22, 22, 28),      -- Slightly lighter dark bg
-            ["Background"] = FromRGB(18, 18, 24),        -- Main background, more visible
-            ["Text"] = FromRGB(255, 255, 255),           -- Pure white text for readability
-            ["Outline"] = FromRGB(55, 55, 65),           -- More visible outline
-            ["Section Top"] = FromRGB(32, 32, 42),       -- Visible section header
-            ["Section Background"] = FromRGB(22, 22, 30),-- Slightly blue-tinted dark bg
-            ["Section Background 2"] = FromRGB(26, 26, 34),-- Alternate section bg
-            ["Accent"] = FromRGB(0, 145, 255),           -- Vivid blue accent
-            ["Element"] = FromRGB(35, 35, 48)            -- More visible element bg
+            ["AccentGradient"] = FromRGB(0, 220, 255),   
+            ["Background 2"] = FromRGB(22, 22, 28),     
+            ["Background"] = FromRGB(18, 18, 24),       
+            ["Text"] = FromRGB(255, 255, 255),         
+            ["Outline"] = FromRGB(100, 100, 115),           
+            ["Section Top"] = FromRGB(32, 32, 42),      
+            ["Section Background"] = FromRGB(22, 22, 30),
+            ["Section Background 2"] = FromRGB(26, 26, 34),
+            ["Accent"] = FromRGB(0, 145, 255),           
+            ["Element"] = FromRGB(35, 35, 48)
         }
     }
 
@@ -4858,6 +4858,14 @@ local Library do
                     Name = "\0",
                     CornerRadius = UDimNew(0, 3)
                 })
+
+                local IndicatorStroke = Instances:Create("UIStroke", {
+                    Parent = Items["Indicator"].Instance,
+                    Name = "\0",
+                    Color = Library.Theme.Outline,
+                    Thickness = 1,
+                    ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+                })  IndicatorStroke:AddToTheme({Color = "Outline"})
                 
                 Items["Accent"] = Instances:Create("Frame", {
                     Parent = Items["Indicator"].Instance,
