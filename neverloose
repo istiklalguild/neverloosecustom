@@ -185,7 +185,7 @@ local Library do
             ["Background 2"] = FromRGB(22, 22, 28),     
             ["Background"] = FromRGB(18, 18, 24),       
             ["Text"] = FromRGB(255, 255, 255),         
-            ["Outline"] = FromRGB(231, 50, 50),           
+            ["Outline"] = FromRGB(25, 25, 28),           
             ["Section Top"] = FromRGB(32, 32, 42),      
             ["Section Background"] = FromRGB(22, 22, 30),
             ["Section Background 2"] = FromRGB(26, 26, 34),
@@ -4870,10 +4870,10 @@ local Library do
                 local IndicatorStroke = Instances:Create("UIStroke", {
                     Parent = Items["Indicator"].Instance,
                     Name = "\0",
-                    Color = Library.Theme.Outline,
+                    Color = FromRGB(255, 75, 75),
                     Thickness = 1.5,
                     ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                })  IndicatorStroke:AddToTheme({Color = "Outline"})
+                })
                 
                 Items["Accent"] = Instances:Create("Frame", {
                     Parent = Items["Indicator"].Instance,
@@ -5369,10 +5369,10 @@ local Library do
                 local ButtonStroke = Instances:Create("UIStroke", {
                     Parent = Items["Button"].Instance,
                     Name = "\0",
-                    Color = Library.Theme.Outline,
+                    Color = FromRGB(255, 75, 75),
                     Thickness = 1.5,
                     ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                })  ButtonStroke:AddToTheme({Color = "Outline"})
+                })
 
                 Items["Accent"] = Instances:Create("Frame", {
                     Parent = Items["Button"].Instance,
@@ -5562,10 +5562,10 @@ local Library do
                 local SliderStroke = Instances:Create("UIStroke", {
                     Parent = Items["RealSlider"].Instance,
                     Name = "\0",
-                    Color = Library.Theme.Outline,
+                    Color = FromRGB(255, 75, 75),
                     Thickness = 1.5,
                     ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                })  SliderStroke:AddToTheme({Color = "Outline"})
+                })
 
                 Instances:Create("UICorner", {
                     Parent = Items["RealSlider"].Instance,
@@ -5854,10 +5854,10 @@ local Library do
                 local DropdownStroke = Instances:Create("UIStroke", {
                     Parent = Items["RealDropdown"].Instance,
                     Name = "\0",
-                    Color = Library.Theme.Outline,
+                    Color = FromRGB(255, 75, 75),
                     Thickness = 1.5,
                     ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                })  DropdownStroke:AddToTheme({Color = "Outline"})
+                })
                 
                 Instances:Create("UICorner", {
                     Parent = Items["RealDropdown"].Instance,
@@ -7128,10 +7128,10 @@ local Library do
                 local TextboxStroke = Instances:Create("UIStroke", {
                     Parent = Items["Background"].Instance,
                     Name = "\0",
-                    Color = Library.Theme.Outline,
+                    Color = FromRGB(255, 75, 75),
                     Thickness = 1.5,
                     ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                })  TextboxStroke:AddToTheme({Color = "Outline"})
+                })
                 
                 Instances:Create("UICorner", {
                     Parent = Items["Background"].Instance,
@@ -7272,10 +7272,10 @@ local Library do
                 local SearchStroke = Instances:Create("UIStroke", {
                     Parent = Items["Search"].Instance,
                     Name = "\0",
-                    Color = Library.Theme.Outline,
+                    Color = FromRGB(255, 75, 75),
                     Thickness = 1.5,
                     ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                })  SearchStroke:AddToTheme({Color = "Outline"})
+                })
                 
                 Instances:Create("UICorner", {
                     Parent = Items["Search"].Instance,
@@ -7305,10 +7305,10 @@ local Library do
                 local ListboxStroke = Instances:Create("UIStroke", {
                     Parent = Items["Background"].Instance,
                     Name = "\0",
-                    Color = Library.Theme.Outline,
+                    Color = FromRGB(255, 75, 75),
                     Thickness = 1.5,
                     ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                })  ListboxStroke:AddToTheme({Color = "Outline"})
+                })
                 
                 Items["Holder"] = Instances:Create("ScrollingFrame", {
                     Parent = Items["Background"].Instance,
