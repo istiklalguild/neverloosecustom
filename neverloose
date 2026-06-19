@@ -367,16 +367,20 @@ local Library do
                 return
             end
 
-            if not self.Instance[Event] then 
-                return
-            end
-
             if IsMobile then
                 if Event == "MouseButton1Down" or Event == "MouseButton1Click" then 
-                    Event = "TouchTap"
+                    if self.Instance:IsA("GuiButton") then
+                        Event = "Activated"
+                    else
+                        Event = "InputBegan"
+                    end
                 elseif Event == "MouseButton2Down" or Event == "MouseButton2Click" then 
-                    Event = "TouchLongPress"
+                    Event = "InputBegan"
                 end
+            end
+
+            if not self.Instance[Event] then 
+                return
             end
 
             return Library:Connect(self.Instance[Event], Callback, Name)
@@ -3841,13 +3845,15 @@ local Library do
                 end)
             end
 
-            Items["Inactive"]:Connect("MouseButton1Down", function()
-                for Index, Value in Page.Window.Pages do 
-                    if Value == Page and Page.Active then
-                        return
-                    end
+            Items["Inactive"]:Connect("InputBegan", function(Input)
+                if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
+                    for Index, Value in Page.Window.Pages do 
+                        if Value == Page and Page.Active then
+                            return
+                        end
 
-                    Value:Turn(Value == Page)
+                        Value:Turn(Value == Page)
+                    end
                 end
             end)
 
