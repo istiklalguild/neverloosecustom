@@ -7763,6 +7763,15 @@ local Library do
                     end
                 end
             })
+
+            UISection:Toggle({
+                Name = "Skip Animations",
+                Flag = "SkipAnimationsToggle",
+                Default = false,
+                Callback = function(Value)
+                    Library.FadeSpeed = Value and 0 or 0.2
+                end
+            })
         end
 
         return Page
