@@ -1035,6 +1035,7 @@ local Library do
             -- Only show blur when window is open AND mainframe is visible
             local shouldBlur = Window.IsOpen and Item.Visible
             if shouldBlur then
+                DepthOfField.Instance.Enabled = true
                 DepthOfField.Instance.NearIntensity = 1
 
                 Part:Tween(nil, {Transparency = 0.97})
@@ -1064,8 +1065,10 @@ local Library do
 
                 Part.Instance.CFrame = Camera.CFrame
             else
-                -- Immediately clear blur when not visible - no tween so no ghost image
+                -- Fully kill the blur effect - no ghost image
+                DepthOfField.Instance.Enabled = false
                 DepthOfField.Instance.NearIntensity = 0
+                Part.Instance.Transparency = 1
                 BlockMesh.Instance.Offset = Vector3New(0, 0, 0)
                 BlockMesh.Instance.Scale  = Vector3New(0, 0, 0)
             end
@@ -3278,7 +3281,9 @@ local Library do
             if IsMobile then 
                 Items["FloatingButton"]:Connect("InputBegan", function(Input)
                     if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then 
-                        Window:SetOpen(not Window.IsOpen)
+                        local newState = not Window.IsOpen
+                        Window.IsOpen = newState  -- set immediately so blur check is correct
+                        Window:SetOpen(newState)
                     end
                 end)
             end
